@@ -51,7 +51,10 @@ const images = {
   flyby: require("./images/flyby.png"),
   name: require("./images/name.svg"),
   flownumber: require("./images/flownumber.png"),
-  tsnumber: require("./images/tsnumber.png")
+  tsnumber: require("./images/tsnumber.png"),
+  fishy: require("./images/fishy.mp4"),
+  amiss: require("./images/amiss.jpg"),
+  snow: require("./images/snow.gif")
 };
 
 const FunHeading = styled(Heading)`
@@ -78,7 +81,7 @@ const HighlightTextDarkGrey = styled("span")`
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["slide"]} transitionDuration={500} theme={theme} contentWidth="1280" contentHeight="720">
+      <Deck transition={["slide"]} transitionDuration={500} theme={theme} contentWidth={1280} contentHeight={720}>
         <Slide align="left top" transition={["slide"]} bgImage={images.s}>
           <Heading textAlign="left" size={2} caps lineHeight={1} textColor="white">
             How to
@@ -139,6 +142,15 @@ export default class Presentation extends React.Component {
           </Heading>
           <Heading fit caps textColor="tertiary" margin={10} padding={"30px 0"}>
             Wonderful
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} align="left top" bgImage={images.amiss}>
+          <Heading size={1} caps textAlign="right" textColor="primary">
+            Are
+          </Heading>
+          <Heading size={1} caps textAlign="right" textColor="primary">
+            they?
           </Heading>
         </Slide>
 
@@ -226,11 +238,12 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Undeniably hype, respected
+        <Slide transition={["slide"]}>
+          <Heading margin="200px 0 0 0" textAlign="left" size={4} caps lineHeight={1} textColor="white">
+            What happened
           </Heading>
         </Slide>
+
         <Slide transition={["slide"]} bgColor="white">
           <Image height="600px" src={images.howtodrawnanowl} />
         </Slide>
@@ -240,7 +253,7 @@ export default class Presentation extends React.Component {
         {/* uuuuuse ttytttpes */}
 
         <Slide transition={["slide"]} bgImage={images.flyby}>
-          <Heading fit size={1} caps margin="300px 0 0 0" lineHeight={1} textColor="tertiary">
+          <Heading fit size={1} caps margin="00px 0 0 0" lineHeight={1} textColor="tertiary">
             Use tyyyypes
           </Heading>
         </Slide>
@@ -249,11 +262,124 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgColor="white">
           <Image src={images.owllenses} height="600px" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            What are the frustrations
+        <Slide transition={["slide"]} bgImage={images.snow}>
+          <Heading margin="200px 0 0 0" textAlign="left" size={4} caps lineHeight={1} textColor="white">
+            frustrations
           </Heading>
         </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
+            Developer frustrations
+          </Heading>
+          <Heading size={4} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            🐢 "Makes my computer crawl"
+          </Heading>
+          <Heading size={4} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            💥 "It breaks things"
+          </Heading>
+          <Heading size={4} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            💼 "Brings so many chores"
+          </Heading>
+          <Heading size={4} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            💸 "Doesn't seem worth it"
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Tooling
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Slow checks
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Package Interactions
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Bad errors
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Setup
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Language
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Annotation
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Permissive
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                External
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Features
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Approach
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                ANY
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Embrace new features
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Structures
+              </Heading>
+            </Fill>
+          </Layout>
+        </Slide>
+
+
+      {/* handme down laptop */}
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
+            Tooling
+          </Heading>
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Slow
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Compiling, inferring, editor integration
+          </Heading>
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Interdependecy
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Volatile upgrades, fear of change
+          </Heading>
+
+                    <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Bad errors
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Cryptic, unhelpful or misleading
+          </Heading>
+
+                    <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Setup
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Large configs and complexi build process
+          </Heading>
+
+          <Heading size={6} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            Bad errors - cryptic, unhelpful, misleading
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            Setup - Coofiguation
+          </Heading>
+        </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
             --- tooling - Slow - Flow / check / Errors yo - TS Error messages Annotation pain Add to stack of prettier /
