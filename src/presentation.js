@@ -54,7 +54,10 @@ const images = {
   tsnumber: require("./images/tsnumber.png"),
   fishy: require("./images/fishy.mp4"),
   amiss: require("./images/amiss.jpg"),
-  snow: require("./images/snow.gif")
+  snow: require("./images/snow.gif"),
+  reasonSplash: require("./images/reasonsplash.png"),
+  ocaml: require("./images/ocaml.png"),
+  bloomberg: require("./images/bloomberg.jpg")
 };
 
 const FunHeading = styled(Heading)`
@@ -68,6 +71,10 @@ const FunHeading = styled(Heading)`
   -o-text-overflow: clip;
   text-overflow: clip;
   text-shadow: 1px 1px 0 #fff, 2px 2px 0 #db4d3f, 3px 3px 0 #01667f, 4px 4px 0 #333333;
+`;
+
+const GreyedImage = styled(Image)`
+  filter: grayscale(100%);
 `;
 
 const HighlightTextBlue = styled("span")`
@@ -339,8 +346,7 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-
-      {/* handme down laptop */}
+        {/* handme down laptop - joke about cost */}
         <Slide transition={["slide"]} bgColor="primary">
           <Heading size={1} caps lineHeight={1} textColor="secondary">
             Tooling
@@ -358,26 +364,284 @@ export default class Presentation extends React.Component {
             Volatile upgrades, fear of change
           </Heading>
 
-                    <Heading size={3} caps textAlign="left" textColor="tertiary">
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
             Bad errors
           </Heading>
           <Heading size={6} caps textAlign="left" textColor="quartenary">
             Cryptic, unhelpful or misleading
           </Heading>
 
-                    <Heading size={3} caps textAlign="left" textColor="tertiary">
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
             Setup
           </Heading>
           <Heading size={6} caps textAlign="left" textColor="quartenary">
-            Large configs and complexi build process
+            Large configs and complex build process
           </Heading>
+        </Slide>
 
-          <Heading size={6} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
-            Bad errors - cryptic, unhelpful, misleading
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
+            Language
           </Heading>
-          <Heading size={6} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
-            Setup - Coofiguation
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Annotation
           </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Verbose chore makes engineer unhappy
+          </Heading>
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Permissive
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Type soundness and nullable
+          </Heading>
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            External
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            It's hard to use packages we rely on
+          </Heading>
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Features
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Just types on JS, missing key beneifts
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
+            Approach
+          </Heading>
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            ANY
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Frustration pressure leads to wiping types
+          </Heading>
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Embrace new features
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Write more concise, safer code
+          </Heading>
+          <Heading size={3} caps textAlign="left" textColor="tertiary">
+            Structures
+          </Heading>
+          <Heading size={6} caps textAlign="left" textColor="quartenary">
+            Think a data structures first mentality
+          </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Image src={images.flow} height="300px" />
+            </Fill>
+            <Fill>
+              <Image src={images.typescript} height="300px" />
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <Image src={images.elm} height="300px" />
+            </Fill>
+            <Fill>
+              <Image src={images.reasonml} height="300px" />
+            </Fill>
+          </Layout>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <GreyedImage src={images.flow} height="300px" />
+            </Fill>
+            <Fill>
+              <GreyedImage src={images.typescript} height="300px" />
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <GreyedImage src={images.elm} height="300px" />
+            </Fill>
+            <Fill>
+              <Image src={images.reasonml} height="300px" />
+            </Fill>
+          </Layout>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Image src={images.reasonSplash} width="100%" />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="primary">
+          <Image src={images.ocaml} width="100%" />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={1} caps>
+            Reason is...{" "}
+          </Heading>
+          <Appear>
+            <Heading size={4} textAlign="left" margin={"30px 0 0 50px"}>
+              {" "}
+              📝 New syntax for OCaml
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading size={4} textAlign="left" margin={"30px 0 0 50px"}>
+              {" "}
+              🌊 Compiler workflow
+            </Heading>
+          </Appear>
+          <Appear>
+            <Heading size={4} textAlign="left" margin={"30px 0 0 50px"}>
+              {" "}
+              🛁 Docs, libs, utils
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="primary">
+          <Image src={images.bloomberg} height={"100%"} />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={2}>OCaml/Reason</Heading>
+          <Text margin={"30px 0"}>⬇️</Text>
+          <Heading size={2}>Bucklescript</Heading>
+          <Text margin={"30px 0"}>⬇️</Text>
+          <Heading size={2}>JavaScript</Heading>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="tertiary">
+          <Heading size={3} textAlign="left" textColor="primary" margin={10}>
+            Why should I write applications in a meta language for a 20 year old
+            systems language that is compiled to JavaScript by a fancy keyboard
+            company?
+          </Heading>
+        </Slide>
+
+         <Slide transition={["fade"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Tooling
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Slow checks
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Package Interactions
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Bad errors
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Setup
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Language
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Annotation
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Permissive
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                External
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Features
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Approach
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                ANY
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Embrace new features
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Structures
+              </Heading>
+            </Fill>
+          </Layout>
+        </Slide>
+
+         <Slide transition={["fade"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Tooling
+              </Heading>
+              <Image src={images.reasonml} height="200px" />
+            </Fill>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Language
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Annotation
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Permissive
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                External
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Features
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Approach
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                ANY
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Embrace new features
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Structures
+              </Heading>
+            </Fill>
+          </Layout>
+        </Slide>
+
+         <Slide transition={["fade"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Tooling
+              </Heading>
+              <Image src={images.reasonml} height="200px" />
+            </Fill>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Language
+              </Heading>
+              <Image src={images.reasonml} height="200px" />
+            </Fill>
+            <Fill>
+              <Heading size={5} caps lineHeight={1} textColor="secondary">
+                Approach
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                ANY
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Embrace new features
+              </Heading>
+              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+                Structures
+              </Heading>
+            </Fill>
+          </Layout>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary">
