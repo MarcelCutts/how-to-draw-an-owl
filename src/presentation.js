@@ -2,7 +2,21 @@
 import React from "react";
 
 // Import Spectacle Core tags
-import { BlockQuote, Cite, Deck, Heading, ListItem, List, Quote, Slide, Text } from "spectacle";
+import {
+  BlockQuote,
+  Cite,
+  Deck,
+  Heading,
+  ListItem,
+  List,
+  Quote,
+  Slide,
+  Text,
+  Image,
+  Fill,
+  Layout,
+  Appear
+} from "spectacle";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
@@ -14,10 +28,10 @@ require("normalize.css");
 
 const theme = createTheme(
   {
-    primary: "#fefefe",
-    secondary: "#e4002f",
-    tertiary: "#01667f",
-    quartenary: "#CECECE"
+    primary: "rgb(242,242,242)",
+    secondary: "rgb(43,21,21)",
+    tertiary: "rgb(224, 69,86)",
+    quartenary: "rgb(127,127,127)"
   },
   {
     primary: "Montserrat",
@@ -26,9 +40,18 @@ const theme = createTheme(
 );
 
 const images = {
-  splash: require("./images/splash.gif"),
   t: require("./images/t.png"),
-  s: require("./images/s.webm")
+  s: require("./images/s.webm"),
+  flow: require("./images/flow.png"),
+  elm: require("./images/elm.png"),
+  typescript: require("./images/typescript.png"),
+  reasonml: require("./images/re.jpg"),
+  howtodrawnanowl: require("./images/drawnanowl.jpg"),
+  owllenses: require("./images/owllenses.png"),
+  flyby: require("./images/flyby.png"),
+  name: require("./images/name.svg"),
+  flownumber: require("./images/flownumber.png"),
+  tsnumber: require("./images/tsnumber.png")
 };
 
 const FunHeading = styled(Heading)`
@@ -37,15 +60,19 @@ const FunHeading = styled(Heading)`
   box-sizing: content-box;
   border: none;
   font: normal 84px / normal "Anton", Helvetica, sans-serif;
-  color: #re4002f;
+  color: rgb(224, 69, 86);
   text-align: center;
   -o-text-overflow: clip;
   text-overflow: clip;
   text-shadow: 1px 1px 0 #fff, 2px 2px 0 #db4d3f, 3px 3px 0 #01667f, 4px 4px 0 #333333;
 `;
 
-const HighlightText = styled("span")`
+const HighlightTextBlue = styled("span")`
   color: #01667f;
+`;
+
+const HighlightTextDarkGrey = styled("span")`
+  color: rgb(43, 21, 21);
 `;
 
 export default class Presentation extends React.Component {
@@ -62,9 +89,7 @@ export default class Presentation extends React.Component {
           <Heading textAlign="left" size={1} caps lineHeight={1} textColor="white">
             owl
           </Heading>
-          <Heading textAlign="left" size={6} margin="300px 0 0 0" textColor="white" caps lineHeight={1}>
-            @marcelcutts
-          </Heading>
+          <Image src={images.name} margin="200px 0 0 0" />
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <FunHeading fit size={1} caps lineHeight={1} margin="0 0 0 -20px" textColor="secondary">
@@ -73,7 +98,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading fit size={1} caps lineHeight={1} textColor="primary">
-            They <HighlightText>promise</HighlightText>
+            They <HighlightTextDarkGrey>promise</HighlightTextDarkGrey>
           </Heading>
           <Heading fit size={1} caps lineHeight={1} textColor="primary">
             a lot
@@ -94,7 +119,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide transition={["slide"]} bgColor="primary">
-        <Heading fit size={1} caps lineHeight={1} textColor="secondary">
+          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
             Types promised us...
           </Heading>
           <Heading size={3} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
@@ -107,50 +132,122 @@ export default class Presentation extends React.Component {
             🛠 Tooling support
           </Heading>
         </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Types have been going on for years
+            Types are
+          </Heading>
+          <Heading fit caps textColor="tertiary" margin={10} padding={"30px 0"}>
+            Wonderful
           </Heading>
         </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Are in use but...
+            They are are in use but...
           </Heading>
         </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit caps lineHeight={1} textColor="secondary">
+            why aren't types
+          </Heading>
+
+          <Heading fit caps lineHeight={1} textColor="tertiary">
+            everywhere?
+          </Heading>
+        </Slide>
+
+        {/* Bubble ciites */}
+        {/* why drag kicking and screaming */}
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit size={1} caps lineHeight={1} textColor="secondary" />
+          <Heading size={2} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            🇺🇸 Boston: 10%
+          </Heading>
+          <Heading size={2} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            🇬🇧 Manchester: 15%
+          </Heading>
+          <Heading size={2} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+            🇩🇪 Berlin: 35%
+          </Heading>
+        </Slide>
+
+        {/* teams also i seen */}
+
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Outside our bubble
+            Typed JS
+          </Heading>
+          <Heading fit caps textColor="tertiary" margin={10} padding={"30px 0"}>
+            isn't new
           </Heading>
         </Slide>
+
+        {/* the fact there's choices means tradeoffs" */}
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Image src={images.flow} height="200px" />
+              <Appear>
+                <Heading margin="0 0 50px 0" size={3} caps lineHeight={1} textColor="secondary">
+                  2014
+                </Heading>
+              </Appear>
+            </Fill>
+            <Fill>
+              <Image src={images.typescript} height="200px" />
+              <Appear>
+                <Heading margin="0 0 50px 0" size={3} caps lineHeight={1} textColor="secondary">
+                  2012
+                </Heading>
+              </Appear>
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <Image src={images.elm} height="200px" />
+              <Appear>
+                <Heading size={3} caps lineHeight={1} textColor="secondary">
+                  2012
+                </Heading>
+              </Appear>
+            </Fill>
+            <Fill>
+              <Image src={images.reasonml} height="200px" />
+              <Appear>
+                <Heading size={3} caps lineHeight={1} textColor="secondary">
+                  2016
+                </Heading>
+              </Appear>
+            </Fill>
+          </Layout>
+        </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
             Undeniably hype, respected
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            How to draw an owl. Bimodal
-          </Heading>
+        <Slide transition={["slide"]} bgColor="white">
+          <Image height="600px" src={images.howtodrawnanowl} />
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            How2 int
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
+
+        {/* Bimodal */}
+
+        {/* uuuuuse ttytttpes */}
+
+        <Slide transition={["slide"]} bgImage={images.flyby}>
+          <Heading fit size={1} caps margin="300px 0 0 0" lineHeight={1} textColor="tertiary">
             Use tyyyypes
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            "this number is an int" - "argue about profunctor lenses on twitter"
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            "this number is an int" - "argue about profunctor lenses on twitter"
-          </Heading>
+        <Slide transition={["slide"]} bgImage={images.tsnumber} />
+        <Slide transition={["slide"]} bgImage={images.flownumber} />
+        <Slide transition={["slide"]} bgColor="white">
+          <Image src={images.owllenses} height="600px" />
         </Slide>
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
