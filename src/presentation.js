@@ -57,7 +57,22 @@ const images = {
   snow: require("./images/snow.gif"),
   reasonSplash: require("./images/reasonsplash.png"),
   ocaml: require("./images/ocaml.png"),
-  bloomberg: require("./images/bloomberg.jpg")
+  bloomberg: require("./images/bloomberg.jpg"),
+  simple: require("./images/packagejson.png"),
+  inference: require("./images/inference.png"),
+  rr: require("./images/rr.png"),
+  palmer: require("./images/palmer.png"),
+  jsoninf: require("./images/jsoninf.png"),
+  bs: require("./images/bs.png"),
+  ppx: require("./images/ppx.gif"),
+  variants: require("./images/variants.png"),
+  patternmatching: require("./images/patternmatching.png"),
+  wat: require("./images/wat.gif"),
+  erlang: require("./images/erlang.png"),
+  elixir: require("./images/elixir.png"),
+  whatsApp: require("./images/whatsapp.svg"),
+  expressive: require("./images/expressive.png"),
+  errors: require("./images/errors.png")
 };
 
 const FunHeading = styled(Heading)`
@@ -85,6 +100,10 @@ const HighlightTextDarkGrey = styled("span")`
   color: rgb(43, 21, 21);
 `;
 
+const Spacer = styled('div')`
+  width: 10%;
+`;
+
 export default class Presentation extends React.Component {
   render() {
     return (
@@ -108,7 +127,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading fit size={1} caps lineHeight={1} textColor="primary">
-            They <HighlightTextDarkGrey>promise</HighlightTextDarkGrey>
+            They <HighlightTextDarkGrey>promised</HighlightTextDarkGrey>
           </Heading>
           <Heading fit size={1} caps lineHeight={1} textColor="primary">
             a lot
@@ -158,12 +177,6 @@ export default class Presentation extends React.Component {
           </Heading>
           <Heading size={1} caps textAlign="right" textColor="primary">
             they?
-          </Heading>
-        </Slide>
-
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            They are are in use but...
           </Heading>
         </Slide>
 
@@ -245,9 +258,12 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide transition={["slide"]}>
-          <Heading margin="200px 0 0 0" textAlign="left" size={4} caps lineHeight={1} textColor="white">
-            What happened
+        <Slide transition={["slide"]} bgImage={images.wat}>
+          <Heading margin="200px 0 0 0" textAlign="left" size={3} caps lineHeight={1} textColor="tertiary">
+            What
+          </Heading>
+          <Heading textAlign="left" size={3} caps lineHeight={1} textColor="tertiary">
+            happened?
           </Heading>
         </Slide>
 
@@ -477,29 +493,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgColor="primary">
           <Image src={images.ocaml} width="100%" />
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} caps>
-            Reason is...{" "}
-          </Heading>
-          <Appear>
-            <Heading size={4} textAlign="left" margin={"30px 0 0 50px"}>
-              {" "}
-              📝 New syntax for OCaml
-            </Heading>
-          </Appear>
-          <Appear>
-            <Heading size={4} textAlign="left" margin={"30px 0 0 50px"}>
-              {" "}
-              🌊 Compiler workflow
-            </Heading>
-          </Appear>
-          <Appear>
-            <Heading size={4} textAlign="left" margin={"30px 0 0 50px"}>
-              {" "}
-              🛁 Docs, libs, utils
-            </Heading>
-          </Appear>
-        </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Image src={images.bloomberg} height={"100%"} />
         </Slide>
@@ -510,15 +504,16 @@ export default class Presentation extends React.Component {
           <Text margin={"30px 0"}>⬇️</Text>
           <Heading size={2}>JavaScript</Heading>
         </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.rr} />
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading size={3} textAlign="left" textColor="primary" margin={10}>
-            Why should I write applications in a meta language for a 20 year old
-            systems language that is compiled to JavaScript by a fancy keyboard
-            company?
+            Why should I write applications in a meta language for a 20 year old systems language that is compiled to
+            JavaScript by a fancy keyboard company?
           </Heading>
         </Slide>
 
-         <Slide transition={["fade"]} bgColor="primary">
+        <Slide transition={["fade"]} bgColor="primary">
           <Layout>
             <Fill>
               <Heading size={5} caps lineHeight={1} textColor="secondary">
@@ -571,7 +566,18 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-         <Slide transition={["fade"]} bgColor="primary">
+        <Slide transition={["fade"]} bgImage={images.simple} />
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
+            2ms
+          </Heading>
+        </Slide>
+
+
+        <Slide transition={["fade"]} bgImage={images.errors} />
+
+        <Slide transition={["fade"]} bgColor="primary">
           <Layout>
             <Fill>
               <Heading size={5} caps lineHeight={1} textColor="secondary">
@@ -613,7 +619,15 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-         <Slide transition={["fade"]} bgColor="primary">
+        <Slide transition={["fade"]} bgImage={images.inference} />
+
+        <Slide transition={["fade"]} bgImage={images.jsoninf} />
+
+        <Slide transition={["fade"]} bgColor="primary">
+          <Image src={images.bs} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary">
           <Layout>
             <Fill>
               <Heading size={5} caps lineHeight={1} textColor="secondary">
@@ -644,87 +658,50 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
+        <Slide transition={["fade"]} bgImage={images.palmer} />
+
+        <Slide transition={["fade"]} bgImage={images.variants} />
+
+        <Slide transition={["fade"]} bgImage={images.expressive} />
+
+        <Slide transition={["fade"]} bgImage={images.patternmatching} />
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Image height="650px" src={images.ppx} />
+        </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            --- tooling - Slow - Flow / check / Errors yo - TS Error messages Annotation pain Add to stack of prettier /
-            eslint (play nice!) / babel / awooo (managerie pain) --- lang Unknown how you can get it to work Syntax
-            upgrades - sci Doesn’t feel right, ffi --- software Perhaps doesn’t push us as far - why?
+            Types are still
+          </Heading>
+          <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
+            important
           </Heading>
         </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Three problems
+            Types in JS are
+          </Heading>
+          <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
+            hard
           </Heading>
         </Slide>
+
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Show four options
+            You are not
+          </Heading>
+          <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
+            alone
           </Heading>
         </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Higlight ReasonML
+
+        <Slide align="left top" transition={["slide"]} bgImage={images.s}>
+          <Heading textAlign="left" size={2} caps margin="200px 0 0 0" lineHeight={1} textColor="white">
+            Thanks :)
           </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Based on ocaml
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            - Slow - Flow / check / Errors yo - TS Error messages Annotation pain Add to stack of prettier / eslint
-            (play nice!) / babel / awooo (managerie pain) --- lang Unknown how you can get it to work Syntax upgrades -
-            sci Doesn’t feel right, ffi
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            We’ll be using ReasonML: Type sound and bangin’ inference, like JS, jsx support, supports several styles
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            2 problems reason, one left
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            So what does that actually look like?
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            So what does that actually look like?
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Owl application
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            types
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Text> Awoo </Text>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Text> Awoo </Text>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Text> Awoo </Text>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Text> Awoo </Text>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Text> Awoo </Text>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="primary">
-          <Text> Awoo </Text>
+          <Image src={images.name} margin="200px 0 0 0" />
         </Slide>
       </Deck>
     );
