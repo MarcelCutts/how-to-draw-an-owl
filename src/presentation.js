@@ -40,7 +40,6 @@ const theme = createTheme(
 );
 
 const images = {
-  t: require("./images/t.png"),
   s: require("./images/s.webm"),
   flow: require("./images/flow.png"),
   elm: require("./images/elm.png"),
@@ -100,7 +99,7 @@ const HighlightTextDarkGrey = styled("span")`
   color: rgb(43, 21, 21);
 `;
 
-const Spacer = styled('div')`
+const Spacer = styled("div")`
   width: 10%;
 `;
 
@@ -568,12 +567,17 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgImage={images.simple} />
 
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
+        <Slide transition={["slide"]} bgColor="r">
+          <Heading fit size={1} caps lineHeight={1} textColor="primary">
             2ms
           </Heading>
         </Slide>
 
+        <Slide transition={["slide"]} bgColor="r">
+          <Heading fit size={1} lineHeight={1} textColor="primary">
+            tiny BUNDLES
+          </Heading>
+        </Slide>
 
         <Slide transition={["fade"]} bgImage={images.errors} />
 
