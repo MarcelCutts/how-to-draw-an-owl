@@ -84,7 +84,8 @@ const FunHeading = styled(Heading)`
   text-align: center;
   -o-text-overflow: clip;
   text-overflow: clip;
-  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #db4d3f, 3px 3px 0 #01667f, 4px 4px 0 #333333;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 #db4d3f, 3px 3px 0 #01667f,
+    4px 4px 0 #333333;
 `;
 
 const GreyedImage = styled(Image)`
@@ -106,21 +107,68 @@ const Spacer = styled("div")`
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["slide"]} transitionDuration={500} theme={theme} contentWidth={1280} contentHeight={720}>
+      <Deck
+        transition={["slide"]}
+        transitionDuration={500}
+        theme={theme}
+        contentWidth={1280}
+        contentHeight={720}
+      >
         <Slide align="left top" transition={["slide"]} bgImage={images.s}>
-          <Heading textAlign="left" size={2} caps lineHeight={1} textColor="white">
+          <Heading
+            textAlign="left"
+            size={2}
+            caps
+            lineHeight={1}
+            textColor="white"
+          >
             How to
           </Heading>
-          <Heading textAlign="left" size={2} caps lineHeight={1} textColor="white">
+          <Heading
+            textAlign="left"
+            size={2}
+            caps
+            lineHeight={1}
+            textColor="white"
+          >
             draw an
           </Heading>
-          <Heading textAlign="left" size={1} caps lineHeight={1} textColor="white">
+          <Heading
+            textAlign="left"
+            size={1}
+            caps
+            lineHeight={1}
+            textColor="white"
+          >
             owl
           </Heading>
           <Image src={images.name} margin="200px 0 0 0" />
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <FunHeading fit size={1} caps lineHeight={1} margin="0 0 0 -20px" textColor="secondary">
+          <FunHeading
+            fit
+            size={1}
+            caps
+            lineHeight={1}
+            margin="0 0 0 -20px"
+            textColor="secondary"
+          >
+            Types!
+          </FunHeading>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          this talk about is what they said they offer,why we havent got what we
+          were promised and how we can get more out of typses
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <FunHeading
+            fit
+            size={1}
+            caps
+            lineHeight={1}
+            margin="0 0 0 -20px"
+            textColor="secondary"
+          >
             Types!
           </FunHeading>
         </Slide>
@@ -136,13 +184,34 @@ export default class Presentation extends React.Component {
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
             Types promised us...
           </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={3}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             🏋🏿‍♂️ Confidence in code
           </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={3}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             🏎 Faster refactoring
           </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={3}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             💥 No runtime errors
           </Heading>
         </Slide>
@@ -150,13 +219,34 @@ export default class Presentation extends React.Component {
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
             Types promised us...
           </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={3}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             📝 Fewer test cases
           </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={3}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             👓 Improved readability
           </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={3}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             🛠 Tooling support
           </Heading>
         </Slide>
@@ -194,13 +284,34 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary" />
-          <Heading size={2} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             🇺🇸 Boston: 10%
           </Heading>
-          <Heading size={2} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             🇬🇧 Manchester: 15%
           </Heading>
-          <Heading size={2} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             🇩🇪 Berlin: 35%
           </Heading>
         </Slide>
@@ -223,7 +334,13 @@ export default class Presentation extends React.Component {
             <Fill>
               <Image src={images.flow} height="200px" />
               <Appear>
-                <Heading margin="0 0 50px 0" size={3} caps lineHeight={1} textColor="secondary">
+                <Heading
+                  margin="0 0 50px 0"
+                  size={3}
+                  caps
+                  lineHeight={1}
+                  textColor="secondary"
+                >
                   2014
                 </Heading>
               </Appear>
@@ -231,7 +348,13 @@ export default class Presentation extends React.Component {
             <Fill>
               <Image src={images.typescript} height="200px" />
               <Appear>
-                <Heading margin="0 0 50px 0" size={3} caps lineHeight={1} textColor="secondary">
+                <Heading
+                  margin="0 0 50px 0"
+                  size={3}
+                  caps
+                  lineHeight={1}
+                  textColor="secondary"
+                >
                   2012
                 </Heading>
               </Appear>
@@ -257,11 +380,28 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
+        <Slide transition={["slide"]}>
+          TS logo here for community frontrunnner
+        </Slide>
+
         <Slide transition={["slide"]} bgImage={images.wat}>
-          <Heading margin="200px 0 0 0" textAlign="left" size={3} caps lineHeight={1} textColor="tertiary">
+          <Heading
+            margin="200px 0 0 0"
+            textAlign="left"
+            size={3}
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+          >
             What
           </Heading>
-          <Heading textAlign="left" size={3} caps lineHeight={1} textColor="tertiary">
+          <Heading
+            textAlign="left"
+            size={3}
+            caps
+            lineHeight={1}
+            textColor="tertiary"
+          >
             happened?
           </Heading>
         </Slide>
@@ -275,9 +415,19 @@ export default class Presentation extends React.Component {
         {/* uuuuuse ttytttpes */}
 
         <Slide transition={["slide"]} bgImage={images.flyby}>
-          <Heading fit size={1} caps margin="00px 0 0 0" lineHeight={1} textColor="tertiary">
+          <Heading
+            fit
+            size={1}
+            caps
+            margin="00px 0 0 0"
+            lineHeight={1}
+            textColor="tertiary"
+          >
             Use tyyyypes
           </Heading>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="white">
+          Basic circle owl what does this mean
         </Slide>
         <Slide transition={["slide"]} bgImage={images.tsnumber} />
         <Slide transition={["slide"]} bgImage={images.flownumber} />
@@ -285,7 +435,14 @@ export default class Presentation extends React.Component {
           <Image src={images.owllenses} height="600px" />
         </Slide>
         <Slide transition={["slide"]} bgImage={images.snow}>
-          <Heading margin="200px 0 0 0" textAlign="left" size={4} caps lineHeight={1} textColor="white">
+          <Heading
+            margin="200px 0 0 0"
+            textAlign="left"
+            size={4}
+            caps
+            lineHeight={1}
+            textColor="white"
+          >
             frustrations
           </Heading>
         </Slide>
@@ -294,16 +451,44 @@ export default class Presentation extends React.Component {
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
             Developer frustrations
           </Heading>
-          <Heading size={4} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             🐢 "Makes my computer crawl"
           </Heading>
-          <Heading size={4} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             💥 "It breaks things"
           </Heading>
-          <Heading size={4} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             💼 "Brings so many chores"
           </Heading>
-          <Heading size={4} caps textAlign="left" textColor="tertiary" margin={10} padding={"30px 0"}>
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
             💸 "Doesn't seem worth it"
           </Heading>
         </Slide>
@@ -314,16 +499,40 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Tooling
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Slow checks
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Package Interactions
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Bad errors
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Setup
               </Heading>
             </Fill>
@@ -331,16 +540,40 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Language
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Annotation
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Permissive
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 External
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Features
               </Heading>
             </Fill>
@@ -348,13 +581,31 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Approach
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 ANY
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Embrace new features
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Structures
               </Heading>
             </Fill>
@@ -468,6 +719,15 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
+          Highlight how TS solved some of these and why it's in the lead
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary">
+          Highlight how there are still big challenges client/server, runtime
+          issues, ANY ANY ANY
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary">
           <Layout>
             <Fill>
               <GreyedImage src={images.flow} height="300px" />
@@ -507,8 +767,9 @@ export default class Presentation extends React.Component {
         <Slide transition={["slide"]} bgImage={images.rr} />
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading size={3} textAlign="left" textColor="primary" margin={10}>
-            Why should I write applications in a meta language for a 20 year old systems language that is compiled to
-            JavaScript by a fancy keyboard company?
+            Why should I write applications in a meta language for a 20 year old
+            systems language that is compiled to JavaScript by a fancy keyboard
+            company?
           </Heading>
         </Slide>
 
@@ -518,16 +779,40 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Tooling
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Slow checks
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Package Interactions
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Bad errors
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Setup
               </Heading>
             </Fill>
@@ -535,16 +820,40 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Language
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Annotation
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Permissive
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 External
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Features
               </Heading>
             </Fill>
@@ -552,13 +861,31 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Approach
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 ANY
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Embrace new features
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Structures
               </Heading>
             </Fill>
@@ -593,16 +920,40 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Language
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Annotation
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Permissive
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 External
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Features
               </Heading>
             </Fill>
@@ -610,13 +961,31 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Approach
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 ANY
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Embrace new features
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Structures
               </Heading>
             </Fill>
@@ -649,13 +1018,31 @@ export default class Presentation extends React.Component {
               <Heading size={5} caps lineHeight={1} textColor="secondary">
                 Approach
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 ANY
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Embrace new features
               </Heading>
-              <Heading size={6} caps textColor="tertiary" margin={10} padding={"30px 0"}>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
                 Structures
               </Heading>
             </Fill>
@@ -702,7 +1089,14 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide align="left top" transition={["slide"]} bgImage={images.s}>
-          <Heading textAlign="left" size={2} caps margin="200px 0 0 0" lineHeight={1} textColor="white">
+          <Heading
+            textAlign="left"
+            size={2}
+            caps
+            margin="200px 0 0 0"
+            lineHeight={1}
+            textColor="white"
+          >
             Thanks :)
           </Heading>
           <Image src={images.name} margin="200px 0 0 0" />
