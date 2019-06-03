@@ -71,7 +71,12 @@ const images = {
   elixir: require("./images/elixir.png"),
   whatsApp: require("./images/whatsapp.svg"),
   expressive: require("./images/expressive.png"),
-  errors: require("./images/errors.png")
+  errors: require("./images/errors.png"),
+  owlMystery: require("./images/owlmystery.png"),
+  owlBasic: require("./images/owlbasic.png"),
+  owlComplete: require("./images/owlcomplete.png"),
+  nest: require("./images/nest.gif"),
+  addType: require("./images/addType.png")
 };
 
 const FunHeading = styled(Heading)`
@@ -96,6 +101,10 @@ const HighlightTextBlue = styled("span")`
   color: #01667f;
 `;
 
+const HighlightTextRed = styled("span")`
+  color: rgb(224, 69, 86);
+`;
+
 const HighlightTextDarkGrey = styled("span")`
   color: rgb(43, 21, 21);
 `;
@@ -111,13 +120,13 @@ export default class Presentation extends React.Component {
         transition={["slide"]}
         transitionDuration={500}
         theme={theme}
-        contentWidth={1280}
-        contentHeight={720}
+        contentWidth={1600}
+        contentHeight={1080}
       >
         <Slide align="left top" transition={["slide"]} bgImage={images.s}>
           <Heading
             textAlign="left"
-            size={2}
+            size={1}
             caps
             lineHeight={1}
             textColor="white"
@@ -126,7 +135,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Heading
             textAlign="left"
-            size={2}
+            size={1}
             caps
             lineHeight={1}
             textColor="white"
@@ -142,7 +151,7 @@ export default class Presentation extends React.Component {
           >
             owl
           </Heading>
-          <Image src={images.name} margin="200px 0 0 0" />
+          <Image src={images.name} height={130} margin="500px 0 0 0" />
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <FunHeading
@@ -156,9 +165,42 @@ export default class Presentation extends React.Component {
             Types!
           </FunHeading>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="primary">
-          this talk about is what they said they offer,why we havent got what we
-          were promised and how we can get more out of typses
+        <Slide
+          transition={["zoom"]}
+          bgColor="primary"
+          notes="this talk about is what they said they offer,why we havent got what we
+          were promised and how we can get more out of typses"
+        >
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"40px 0"}
+          >
+            What was promised?
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"40px 0"}
+          >
+            Why the disappointment?
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"40px 0"}
+          >
+            Can we do better?
+          </Heading>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <FunHeading
@@ -314,6 +356,16 @@ export default class Presentation extends React.Component {
           >
             🇩🇪 Berlin: 35%
           </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🇮🇱 Tel Aviv: 20%
+          </Heading>
         </Slide>
 
         {/* teams also i seen */}
@@ -380,29 +432,101 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide transition={["slide"]}>
-          TS logo here for community frontrunnner
+        <Slide
+          transition={["slide"]}
+          notes="We only had a clear frontrunner emerge recently, by picking up some of the pain points. But why is it 8 years 7 years after TS launched it's still not widely adopted and even then, embraced haphazardly"
+        >
+          <Image src={images.typescript} height="400px" />
         </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
+            Even in teams that use types
+          </Heading>
+          <Heading fit caps textColor="tertiary" margin={10} padding={"30px 0"}>
+            rarely embrace
+          </Heading>
+          <Heading fit caps textColor="tertiary" margin={10} padding={"30px 0"}>
+            them fully
+          </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgImage={images.palmer} />
 
         <Slide transition={["slide"]} bgImage={images.wat}>
           <Heading
             margin="200px 0 0 0"
             textAlign="left"
-            size={3}
+            size={1}
             caps
             lineHeight={1}
+            bgColor="rgba(255,255,255, 0.8)"
             textColor="tertiary"
           >
-            What
+            How did we
           </Heading>
           <Heading
+            bgColor="rgba(255,255,255, 0.8)"
             textAlign="left"
-            size={3}
+            size={1}
             caps
             lineHeight={1}
             textColor="tertiary"
           >
-            happened?
+            get here?
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]}>
+          <Heading
+            fit
+            size={1}
+            caps
+            margin="00px 0 0 0"
+            lineHeight={1}
+            textColor="secondary"
+          >
+            Modern JS
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👨‍🚀 Greater complexity
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👓 More critical
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🛠 Long lived
+          </Heading>
+        </Slide>
+
+        <Slide
+          transition={["slide"]}
+          bgImage={images.flyby}
+          notes="some well meaning haskelite"
+        >
+          <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
+            Use tyyyypes
           </Heading>
         </Slide>
 
@@ -410,31 +534,212 @@ export default class Presentation extends React.Component {
           <Image height="600px" src={images.howtodrawnanowl} />
         </Slide>
 
+        <Slide transition={["slide"]} bgColor="white">
+          <Image height="600px" src={images.owlMystery} />
+        </Slide>
+
         {/* Bimodal */}
 
         {/* uuuuuse ttytttpes */}
+        <Slide transition={["slide"]} bgImage={images.addType} />
 
-        <Slide transition={["slide"]} bgImage={images.flyby}>
+        <Slide
+          transition={["slide"]}
+          bgColor="white"
+          notes="these instructions are clear, understandable, and easy to follow. How do you get from this toy to a full application? How hard can it be?"
+        >
+          <Image height="600px" src={images.owlBasic} />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="white">
+          <Heading fit caps textColor="secondary">
+            Then use types
+          </Heading>
+          <Heading fit caps textColor="secondary">
+            in a <HighlightTextRed>real project</HighlightTextRed>
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="white">
+          <Heading caps fit textColor="secondary">
+            Types come with
+          </Heading>
+          <Heading caps fit textColor="tertiary">
+            challenges
+          </Heading>
+          <Layout>
+            <Fill>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Writing types
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Maintaining types
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Third party types
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Duplicate types
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Editor tooling
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Build process
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Opportunity cost
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Long term risk
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                People
+              </Heading>
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="white">
           <Heading
-            fit
             size={1}
             caps
-            margin="00px 0 0 0"
-            lineHeight={1}
-            textColor="tertiary"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
           >
-            Use tyyyypes
+            People
+          </Heading>
+          <Heading
+            size={3}
+            caps
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            People are always tricky
           </Heading>
         </Slide>
         <Slide transition={["slide"]} bgColor="white">
-          Basic circle owl what does this mean
+          <Heading caps fit textColor="tertiary">
+            Type promises
+          </Heading>
+          <Layout>
+            <Fill>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Code confidence
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Refactoring
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Runtime errors
+              </Heading>
+            </Fill>
+            <Fill>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Fewer test cases
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Readability
+              </Heading>
+              <Heading
+                size={3}
+                textAlign="left"
+                textColor="secondary"
+                padding={"30px 30px"}
+              >
+                Tooling
+              </Heading>
+            </Fill>
+          </Layout>
         </Slide>
-        <Slide transition={["slide"]} bgImage={images.tsnumber} />
-        <Slide transition={["slide"]} bgImage={images.flownumber} />
-        <Slide transition={["slide"]} bgColor="white">
-          <Image src={images.owllenses} height="600px" />
+
+        <Slide
+          transition={["slide"]}
+          bgColor="white"
+          notes="You just wanted to ship an app but now you have to understand GADTs"
+        >
+          <Image src={images.owlComplete} height="600px" />
         </Slide>
-        <Slide transition={["slide"]} bgImage={images.snow}>
+
+        <Slide
+          transition={["slide"]}
+          bgImage={images.snow}
+          notes="if we were to look at the shortcomings systematically"
+        >
           <Heading
             margin="200px 0 0 0"
             textAlign="left"
@@ -448,168 +753,17 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Developer frustrations
+          <Heading size={1} caps lineHeight={1} textColor="tertiary">
+            Tooling
           </Heading>
-          <Heading
-            size={4}
-            caps
-            textAlign="left"
-            textColor="tertiary"
-            margin={10}
-            padding={"30px 0"}
-          >
-            🐢 "Makes my computer crawl"
-          </Heading>
-          <Heading
-            size={4}
-            caps
-            textAlign="left"
-            textColor="tertiary"
-            margin={10}
-            padding={"30px 0"}
-          >
-            💥 "It breaks things"
-          </Heading>
-          <Heading
-            size={4}
-            caps
-            textAlign="left"
-            textColor="tertiary"
-            margin={10}
-            padding={"30px 0"}
-          >
-            💼 "Brings so many chores"
-          </Heading>
-          <Heading
-            size={4}
-            caps
-            textAlign="left"
-            textColor="tertiary"
-            margin={10}
-            padding={"30px 0"}
-          >
-            💸 "Doesn't seem worth it"
-          </Heading>
-        </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary">
-          <Layout>
-            <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
-                Tooling
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Slow checks
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Package Interactions
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Bad errors
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Setup
-              </Heading>
-            </Fill>
-            <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
-                Language
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Annotation
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Permissive
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                External
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Features
-              </Heading>
-            </Fill>
-            <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
-                Approach
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                ANY
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Embrace new features
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Structures
-              </Heading>
-            </Fill>
-          </Layout>
+          <Heading size={3} caps lineHeight={1} textColor="secondary">
+            and
+          </Heading>
+
+          <Heading size={1} caps lineHeight={1} textColor="tertiary">
+            Language
+          </Heading>
         </Slide>
 
         {/* handme down laptop - joke about cost */}
@@ -618,10 +772,10 @@ export default class Presentation extends React.Component {
             Tooling
           </Heading>
           <Heading size={3} caps textAlign="left" textColor="tertiary">
-            Slow
+            Editor integration
           </Heading>
           <Heading size={6} caps textAlign="left" textColor="quartenary">
-            Compiling, inferring, editor integration
+            Speed, ease, helpfulness
           </Heading>
           <Heading size={3} caps textAlign="left" textColor="tertiary">
             Interdependecy
@@ -676,30 +830,92 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={1} caps lineHeight={1} textColor="secondary">
-            Approach
+          <Heading size={3} caps lineHeight={1} textColor="secondary">
+            What have we learnt?
           </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary">
-            ANY
+          <Heading fit caps lineHeight={1} textColor="tertiary">
+            Typing JS
           </Heading>
-          <Heading size={6} caps textAlign="left" textColor="quartenary">
-            Frustration pressure leads to wiping types
-          </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary">
-            Embrace new features
-          </Heading>
-          <Heading size={6} caps textAlign="left" textColor="quartenary">
-            Write more concise, safer code
-          </Heading>
-          <Heading size={3} caps textAlign="left" textColor="tertiary">
-            Structures
-          </Heading>
-          <Heading size={6} caps textAlign="left" textColor="quartenary">
-            Think a data structures first mentality
+          <Heading fit caps lineHeight={1} textColor="tertiary">
+            is hard
           </Heading>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary">
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={3} caps lineHeight={1} textColor="secondary">
+            Should we just
+          </Heading>
+          <Heading fit caps lineHeight={1} textColor="tertiary">
+            give up?
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="tertiary">
+          <Heading fit caps lineHeight={1} textColor="primary">
+            Of course
+          </Heading>
+          <Heading fit caps lineHeight={1} textColor="primary">
+            not!
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]}>
+          <Heading
+            fit
+            size={1}
+            caps
+            margin="00px 0 0 0"
+            lineHeight={1}
+            textColor="secondary"
+          >
+            Modern JS
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👨‍🚀 Greater complexity
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👓 More critical
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🛠 Long lived
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit caps lineHeight={1} textColor="secondary">
+            We can <HighlightTextRed>increment</HighlightTextRed>
+          </Heading>
+          <Heading fit caps lineHeight={1} textColor="secondary">
+            to a positive outcome
+          </Heading>
+        </Slide>
+
+        <Slide
+          transition={["fade"]}
+          bgColor="primary"
+          notes="If we look at the landscape we can see each one tried to do different parts"
+        >
           <Layout>
             <Fill>
               <Image src={images.flow} height="300px" />
@@ -719,12 +935,98 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
-          Highlight how TS solved some of these and why it's in the lead
+          <Layout>
+            <Fill>
+              <GreyedImage src={images.flow} height="300px" />
+            </Fill>
+            <Fill>
+              <Image src={images.typescript} height="300px" />
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <GreyedImage src={images.elm} height="300px" />
+            </Fill>
+            <Fill>
+              <GreyedImage src={images.reasonml} height="300px" />
+            </Fill>
+          </Layout>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Heading size={2} caps lineHeight={1} textColor="secondary">
+                Tooling
+              </Heading>
+              <Image src={images.typescript} height="200px" />
+              <Appear>
+                <Heading
+                  size={6}
+                  caps
+                  textColor="tertiary"
+                  margin={10}
+                  padding={"30px 0"}
+                >
+                  (Speed?)
+                </Heading>
+              </Appear>
+            </Fill>
+            <Fill>
+              <Heading size={2} caps lineHeight={1} textColor="secondary">
+                Language
+              </Heading>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
+                Annotation
+              </Heading>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
+                Permissive
+              </Heading>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
+                External
+              </Heading>
+              <Heading
+                size={6}
+                caps
+                textColor="tertiary"
+                margin={10}
+                padding={"30px 0"}
+              >
+                Features
+              </Heading>
+            </Fill>
+          </Layout>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
           Highlight how there are still big challenges client/server, runtime
           issues, ANY ANY ANY
+        </Slide>
+
+        <Slide>Tooling is important</Slide>
+
+        <Slide transition={["zoom"]} bgImage={images.nest}>
+          <Heading fit bgColor="rgba(255,255,255,0.8)">
+            Where next?
+          </Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
@@ -1048,8 +1350,6 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-
-        <Slide transition={["fade"]} bgImage={images.palmer} />
 
         <Slide transition={["fade"]} bgImage={images.variants} />
 
