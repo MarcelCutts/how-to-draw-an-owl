@@ -83,7 +83,15 @@ const images = {
   prettierLogo: require("./images/prettier-logo.png"),
   ocamlCode: require("./images/ocamlcode.png"),
   simple: require("./images/simple.gif"),
-  simpleReason: require("./images/simple.png")
+  simpleReason: require("./images/simple.png"),
+  yahoo: require("./images/yahoo.png"),
+  jquery: require("./images/jquery.gif"),
+  node: require("./images/node.png"),
+  chrome: require("./images/chrome.png"),
+  electron: require("./images/electron.png"),
+  so: require("./images/so.png"),
+  codegen: require("./images/codegen.png"),
+  basic: require("./images/basic.png")
 };
 
 const FunHeading = styled(Heading)`
@@ -210,6 +218,210 @@ export default class Presentation extends React.Component {
             Can we do <HighlightTextRed>better?</HighlightTextRed>
           </Heading>
         </Slide>
+        <Slide>
+          <Heading size={1} textColor="secondary">
+            "JavaScript has types?"
+          </Heading>
+          <Heading size={3} textColor="tertiary">
+            - A very senior Twitter engineer
+          </Heading>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            ⏱ Designed in <HighlightTextRed>10 days</HighlightTextRed> by
+            Brendan Eich
+          </Heading>
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👩‍🎤 Inspired by <HighlightTextRed>Smalltalk</HighlightTextRed> and{" "}
+            <HighlightTextRed>Scheme</HighlightTextRed>
+          </Heading>
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🍡 Just a "glue" language for{" "}
+            <HighlightTextRed>amateurs</HighlightTextRed>
+          </Heading>
+
+          <Appear>
+            <Heading fit textColor="tertiary" margin="60px 0 0 0">
+              🔥🎉 GMAIL 🔥🎉
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide transition={["zoom"]}>
+          <Image width="100%" src={images.yahoo} />
+        </Slide>
+
+        <Slide transition={["zoom"]}>
+          <Image height="60%" src={images.jquery} />
+        </Slide>
+
+        <Slide transition={["zoom"]}>
+          <Heading size={1} textColor="secondary" caps>
+            The DOM is a{" "}
+            <HighlightTextRed>terrible foundation</HighlightTextRed>, but...
+          </Heading>
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🚪 INCREDIBLY accessible platform
+          </Heading>
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            ⚡️ Push updates instantly
+          </Heading>
+
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👷‍♀️ No build pipeline
+          </Heading>
+
+          <Heading
+            size={4}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            💸 Minimal startup cost
+          </Heading>
+        </Slide>
+
+        <Slide transition={["zoom"]}>
+          <Layout>
+            <Fill>
+              <Image width="60%" src={images.chrome} />
+            </Fill>
+            <Fill>
+              <Image width="100%" src={images.node} />
+            </Fill>
+            <Fill>
+              <Image width="60%" src={images.electron} />
+            </Fill>
+          </Layout>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgImage={images.so} />
+
+        <Slide transition={["slide"]}>
+          <Heading
+            fit
+            size={1}
+            caps
+            margin="00px 0 0 0"
+            lineHeight={1}
+            textColor="secondary"
+          >
+            Modern JS
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👨‍🚀 Greater complexity
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👓 More critical
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🛠 Long lived
+          </Heading>
+
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🏃‍♂️ Runs everywhere
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Image src={images.typescript} height="250px" />
+            </Fill>
+            <Fill>
+              <Image src={images.babelLogo} height="250px" />
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <Image src={images.esLintLogo} height="250px" />
+            </Fill>
+            <Fill>
+              <Image src={images.prettierLogo} height="250px" />
+            </Fill>
+          </Layout>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={3} textColor="secondary">
+            "ARMv8.3 adds a new float-to-int instruction with errors and
+            out-of-range values handled
+            <HighlightTextRed> the way that JavaScript </HighlightTextRed>
+            wants. The previous [instructions] to get JavaScript’s semantics
+            were much slower."
+          </Heading>
+        </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <FunHeading
             fit
@@ -222,6 +434,7 @@ export default class Presentation extends React.Component {
             Types!
           </FunHeading>
         </Slide>
+
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading fit size={1} caps lineHeight={1} textColor="primary">
             They <HighlightTextDarkGrey>promised</HighlightTextDarkGrey>
@@ -525,6 +738,16 @@ export default class Presentation extends React.Component {
             padding={"30px 0"}
           >
             🛠 Long lived
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🏃‍♂️ Runs everywhere
           </Heading>
         </Slide>
 
@@ -1030,8 +1253,88 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide transition={["zoom"]}>
-          <Heading size={1} textAlign="primary" />
+        <Slide align="flex-start center" transition={["zoom"]}>
+          <Image width="10%" src={images.typescript} />
+
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🏎 Speed updates!
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🗣 Incremental language
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🛠 Supporting tools
+          </Heading>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="white">
+          <Image width="100%" src={images.codegen} />
+        </Slide>
+
+        <Slide align="flex-start center" transition={["zoom"]}>
+          <Image width="10%" src={images.typescript} />
+
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            😩 Build process complex
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🚨 Type soundness
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🛑 Language limits
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            👏 GREAT introduction
+          </Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
@@ -1070,34 +1373,6 @@ export default class Presentation extends React.Component {
           <Image src={images.ocaml} width="100%" />
         </Slide>
 
-        <Slide transition={["slide"]} bgImage={images.ocamlCode} />
-
-        <Slide transition={["slide"]} bgImage={images.simpleReason} />
-
-        <Slide transition={["slide"]} bgColor="primary">
-          <Image src={images.reasonSplash} width="100%" />
-        </Slide>
-
-        <Slide transition={["slide"]} bgColor="primary">
-          <Image src={images.bloomberg} height={"100%"} />
-        </Slide>
-
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={2}>OCaml/ReasonML</Heading>
-          <Text margin={"30px 0"}>⬇️</Text>
-          <Heading size={2}>Bucklescript</Heading>
-          <Text margin={"30px 0"}>⬇️</Text>
-          <Heading size={2}>JavaScript</Heading>
-        </Slide>
-
-        <Slide transition={["slide"]} bgColor="tertiary">
-          <Heading size={3} textAlign="left" textColor="primary" margin={10}>
-            Why should I write applications in an alternative syntax for a 20
-            year old systems language that is compiled to JavaScript by a fancy
-            keyboard company?
-          </Heading>
-        </Slide>
-
         <Slide transition={["slide"]} bgColor="primary">
           <Image src={images.ocaml} width="50%" />
           <Layout>
@@ -1120,10 +1395,67 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
+        <Slide transition={["slide"]} bgColor="primary">
+          <Image src={images.bloomberg} height={"100%"} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="primary">
+          <Image src={images.bs} />
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={2}>OCaml</Heading>
+          <Text margin={"30px 0"}>⬇️</Text>
+          <Heading size={2}>Bucklescript</Heading>
+          <Text margin={"30px 0"}>⬇️</Text>
+          <Heading size={2}>JavaScript</Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgImage={images.ocamlCode} />
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Layout>
+            <Fill>
+              <Image width={"80%"} src={images.erlang} />
+            </Fill>
+            <Fill>
+              <Image width={"70%"} src={images.elixir} />
+            </Fill>
+          </Layout>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Image src={images.reasonSplash} width="100%" />
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading size={2}>OCaml/ReasonML</Heading>
+          <Text margin={"30px 0"}>⬇️</Text>
+          <Heading size={2}>Bucklescript</Heading>
+          <Text margin={"30px 0"}>⬇️</Text>
+          <Heading size={2}>JavaScript</Heading>
+        </Slide>
+
+        <Slide bgImage={images.basic} />
+
+        <Slide transition={["slide"]} bgColor="tertiary">
+          <Heading size={3} textAlign="left" textColor="primary" margin={10}>
+            Marcel, you idiot. Are you seriously suggesting I write applications
+            in an alternative syntax for a 20 year old systems language that is
+            compiled to JavaScript by a fancy keyboard company?
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit textColor="tertiary">
+            Yes.
+          </Heading>
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="primary">
           <Layout>
             <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
+              <Heading size={2} caps lineHeight={1} textColor="secondary">
                 Tooling
               </Heading>
               <Heading
@@ -1164,7 +1496,7 @@ export default class Presentation extends React.Component {
               </Heading>
             </Fill>
             <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
+              <Heading size={2} caps lineHeight={1} textColor="secondary">
                 Language
               </Heading>
               <Heading
@@ -1282,10 +1614,6 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgImage={images.inference} />
 
         <Slide transition={["fade"]} bgImage={images.jsoninf} />
-
-        <Slide transition={["fade"]} bgColor="primary">
-          <Image src={images.bs} />
-        </Slide>
 
         <Slide>ES2030</Slide>
 
