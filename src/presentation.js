@@ -91,7 +91,12 @@ const images = {
   electron: require("./images/electron.png"),
   so: require("./images/so.png"),
   codegen: require("./images/codegen.png"),
-  basic: require("./images/basic.png")
+  basic: require("./images/basic.png"),
+  error: require("./images/error.png"),
+  external: require("./images/external.png"),
+  raw: require("./images/raw.png"),
+  es2030: require("./images/es2030.png"),
+  react: require("./images/react.png")
 };
 
 const FunHeading = styled(Heading)`
@@ -1131,6 +1136,16 @@ export default class Presentation extends React.Component {
           >
             🛠 Long lived
           </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="tertiary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🏃‍♂️ Runs everywhere
+          </Heading>
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary">
@@ -1452,6 +1467,16 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
+        <Slide transition={["slide"]} bgColor="tertiary">
+          <Heading size={1} textAlign="left" textColor="primary" margin={10}>
+            Who would imagine such a thing let alone build it?
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Image src={images.react} />
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="primary">
           <Layout>
             <Fill>
@@ -1459,40 +1484,31 @@ export default class Presentation extends React.Component {
                 Tooling
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
                 padding={"30px 0"}
               >
-                Slow checks
+                Slow
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
                 padding={"30px 0"}
               >
-                Package Interactions
+                Unhelpful
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
                 padding={"30px 0"}
               >
-                Bad errors
-              </Heading>
-              <Heading
-                size={6}
-                caps
-                textColor="tertiary"
-                margin={10}
-                padding={"30px 0"}
-              >
-                Setup
+                Build process
               </Heading>
             </Fill>
             <Fill>
@@ -1500,7 +1516,7 @@ export default class Presentation extends React.Component {
                 Language
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
@@ -1509,7 +1525,7 @@ export default class Presentation extends React.Component {
                 Annotation
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
@@ -1518,7 +1534,7 @@ export default class Presentation extends React.Component {
                 Permissive
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
@@ -1527,7 +1543,7 @@ export default class Presentation extends React.Component {
                 External
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
@@ -1539,38 +1555,33 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide transition={["fade"]} bgImage={images.simple} />
-
-        <Slide transition={["slide"]} bgColor="r">
-          <Heading fit size={1} caps lineHeight={1} textColor="primary">
-            2ms
+        <Slide transition={["slide"]}>
+          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
+            Facebook messenger rebuild
+          </Heading>
+          <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
+            {"< 0.1ms"}
           </Heading>
         </Slide>
-
-        <Slide transition={["slide"]} bgColor="r">
-          <Heading fit size={1} lineHeight={1} textColor="primary">
-            tiny BUNDLES
-          </Heading>
-        </Slide>
-
-        <Slide transition={["fade"]} bgImage={images.errors} />
 
         <Slide transition={["slide"]} bgImage={images.simple} />
 
+        <Slide transition={["slide"]} bgImage={images.error} />
+
         <Slide transition={["fade"]} bgColor="primary">
           <Layout>
             <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
+              <Heading size={2} caps lineHeight={1} textColor="secondary">
                 Tooling
               </Heading>
-              <Image src={images.reasonml} height="200px" />
+              <Image src={images.reasonml} height="300px" />
             </Fill>
             <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
+              <Heading size={2} caps lineHeight={1} textColor="secondary">
                 Language
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
@@ -1579,7 +1590,7 @@ export default class Presentation extends React.Component {
                 Annotation
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
@@ -1588,7 +1599,7 @@ export default class Presentation extends React.Component {
                 Permissive
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
@@ -1597,7 +1608,7 @@ export default class Presentation extends React.Component {
                 External
               </Heading>
               <Heading
-                size={6}
+                size={4}
                 caps
                 textColor="tertiary"
                 margin={10}
@@ -1609,47 +1620,87 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide>ES2030</Slide>
-
         <Slide transition={["fade"]} bgImage={images.inference} />
 
-        <Slide transition={["fade"]} bgImage={images.jsoninf} />
+        <Slide transition={["fade"]} bgImage={images.external} />
 
-        <Slide>ES2030</Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading fit caps textColor="secondary">
+            ES<HighlightTextRed>2030</HighlightTextRed>
+          </Heading>
+        </Slide>
+
+        <Slide transition={["fade"]} bgImage={images.es2030} />
+        <Slide transition={["fade"]} bgImage={images.raw} />
 
         <Slide transition={["fade"]} bgColor="primary">
           <Layout>
             <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
+              <Heading size={2} caps lineHeight={1} textColor="secondary">
                 Tooling
               </Heading>
-              <Image src={images.reasonml} height="200px" />
+              <Image src={images.reasonml} height="300px" />
             </Fill>
             <Fill>
-              <Heading size={5} caps lineHeight={1} textColor="secondary">
+              <Heading size={2} caps lineHeight={1} textColor="secondary">
                 Language
               </Heading>
-              <Image src={images.reasonml} height="200px" />
+              <Image src={images.reasonml} height="300px" />
             </Fill>
           </Layout>
         </Slide>
 
-        <Slide transition={["fade"]} bgImage={images.variants} />
+        <Slide transition={["zoom"]}>
+          <Heading fit caps textColor="secondary">
+            <HighlightTextRed>ReasonML</HighlightTextRed> Tradeoffs
+          </Heading>
 
-        <Slide transition={["fade"]} bgImage={images.expressive} />
-
-        <Slide transition={["fade"]} bgImage={images.patternmatching} />
-
-        <Slide transition={["slide"]} bgColor="primary">
-          <Image height="650px" src={images.ppx} />
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            📚 JSON clunky
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🤨 Async quibbling
+          </Heading>
+          <Heading
+            size={2}
+            caps
+            textAlign="left"
+            textColor="secondary"
+            margin={10}
+            padding={"30px 0"}
+          >
+            🔭 Pioneering is hard
+          </Heading>
         </Slide>
 
-        <Slide transition={["slide"]} bgColor="primary">
-          <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            Types are still
+        <Slide transition={["zoom"]}>
+          <Heading fit caps textColor="secondary">
+            Should <HighlightTextRed> you </HighlightTextRed> try it?
           </Heading>
-          <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
-            important
+          <Appear>
+            <Heading fit caps textColor="secondary" margin="30px 0">
+              Slowly, maybe where TS fails?
+            </Heading>
+          </Appear>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="tertiary">
+          <Heading fit textColor="primary">
+            What did we learn?
           </Heading>
         </Slide>
 
@@ -1663,18 +1714,36 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit caps lineHeight={1} textColor="secondary">
+            Types are still
+          </Heading>
+          <Heading fit caps lineHeight={1} textColor="tertiary">
+            important
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
+          <Heading fit caps lineHeight={1} textColor="secondary">
+            Effective change requires
+          </Heading>
+          <Heading fit caps lineHeight={1} textColor="tertiary">
+            Incremental progress
+          </Heading>
+        </Slide>
+
+        <Slide transition={["slide"]} bgColor="primary">
           <Heading fit size={1} caps lineHeight={1} textColor="secondary">
-            You are not
+            Be the change
           </Heading>
           <Heading fit size={1} caps lineHeight={1} textColor="tertiary">
-            alone
+            you want to see in the world
           </Heading>
         </Slide>
 
         <Slide align="left top" transition={["slide"]} bgImage={images.s}>
           <Heading
             textAlign="left"
-            size={2}
+            size={1}
             caps
             margin="200px 0 0 0"
             lineHeight={1}
@@ -1682,7 +1751,7 @@ export default class Presentation extends React.Component {
           >
             Thanks :)
           </Heading>
-          <Image src={images.name} margin="200px 0 0 0" />
+          <Image height="13%" src={images.name} margin="300px 0 0 0" />
         </Slide>
       </Deck>
     );
